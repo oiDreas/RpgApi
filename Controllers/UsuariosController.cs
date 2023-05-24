@@ -14,7 +14,7 @@ namespace RpgMvc.Controllers
     
     public class UsuariosController : Controller
     {
-        public string uriBase = "http://localhost:5164/Usuarios/";
+        public string uriBase = "http://Hugo-DS.somee.com/RpgApi/Usuarios/";
         public IActionResult Index()
         {
             return View("CadastrarUsuario");
