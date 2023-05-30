@@ -13,7 +13,7 @@
     <div class="alert alert-danger" role="alert">
         @TempData["MensagemErro"]</div>
 }
-<h2>Ataque com Arma</h2>
+<h2>Ataque com Habilidade</h2>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -25,6 +25,14 @@
                 @Html.DropDownListFor(model => model.AtacanteId, new SelectList(@ViewBag.ListaAtacantes, "Id", "Nome"),
             "---Selecione---", new { @class = "form-control" })</div>
         </div>
+
+        <div class="form-group">
+            @Html.DisplayName("Habilidade")
+            <div class="col-md-6">
+                @Html.DropDownListFor(model => model.HabilidadeId, new SelectList(@ViewBag.ListaHabilidades, "Id", "Nome"),
+            "---Selecione---", new { @class = "form-control" })</div>
+        </div>
+
         <div class="form-group">
             @Html.DisplayName("Oponente")
             <div class="col-md-6">
@@ -34,7 +42,7 @@
         <br/>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-6">
-                <input type="submit" value="Atacar com Arma!!!" class="btn btn-primary" />
+                <input type="submit" value="Atacar com Habilidade!!!" class="btn btn-primary" />
             </div>
         </div>
     </div>
