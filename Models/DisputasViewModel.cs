@@ -14,4 +14,6 @@ namespace RpgMvc.Models
         public List<int> ListaIdPersonagens { get; set; } = new List<int>();
         public List<string> Resultados { get; set; } = new List<string>();
     }
+
+    
 }

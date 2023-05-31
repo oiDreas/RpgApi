@@ -53,7 +53,8 @@
             @Html.ActionLink("Editar", "Edit", new { id = item.Id } ) |
                 @Html.ActionLink("Detalhes", "Details", new { id = item.Id }) |
                 @Html.ActionLink("Deletar", "Delete", new { id = item.Id }
-            , new {onclick = "return confirm('Deseja realmente deletar este personagem?');"})
+            , new {onclick = "return confirm('Deseja realmente deletar este personagem?');"}) |
+            @Html.ActionLink("Listar Habilidades", "Index", "PersonagemHabilidades", new {id = item.Id})
             </td>
         </tr>
     }
